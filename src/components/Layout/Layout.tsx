@@ -18,11 +18,9 @@ const Layout: FC<PropsWithChildren<LayoutPropsTypes>> = ({
         keywords={keywords ? keywords : ''}
         description={description ? description : ''}
       >
-        <div className={styles.container}>
-          <Header />
-          <main className={styles.main}>{children}</main>
-          <Footer />
-        </div>
+        <Header />
+        <main className={styles.main}>{children}</main>
+        <Footer />
       </Meta>
     </>
   );

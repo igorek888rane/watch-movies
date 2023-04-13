@@ -3,7 +3,7 @@ import styles from './Header.module.scss';
 
 const Header: FC = () => {
   return (
-    <header className={styles.header}>
+    <header className={styles.container}>
       Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
       Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала
       XVI века. В то время некий безымянный печатник создал большую коллекцию
