@@ -1,0 +1,108 @@
+.wrapper {
+  position: relative;
+
+  .popUpWrapper {
+    max-width: 400px;
+    height: 30px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+
+    .filter_burg {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .solid_1,.solid_2,.solid_3 {
+        height: 3px;
+        border-radius: 5px;
+        background-color: white;
+        margin-top: 3px;
+      }
+      .solid_1{
+        width: 16px;
+      }
+      .solid_2{
+        width: 13px;
+      }
+      .solid_3{
+        width: 10px;
+      }
+    }
+    .sort_name {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 500;
+      font-style: normal;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      height: 20px;
+      font-family: iviSans, Arial, Helvetica, Helvetica Neue, FreeSans, sans-serif;
+    }
+
+    .svg_arrowDown {
+      margin-top: 5px;
+    }
+    .svg_arrowUp {
+      margin-top: 5px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .list_item {
+    position: absolute;
+    top: 32px;
+    z-index: 2;
+    width: 250px;
+    height: 540px;
+    background-color: #1f1b2e;
+    display: inline-block;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    background-color: #1f1b2e;
+    box-shadow: 0 20px 40px rgba(7, 5, 14, 0.4);
+    .default_item {
+      margin: 4px 0 12px 4px;
+      padding: 0 16px;
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 400;
+      font-style: normal;
+      color: #a5a1b2;
+      span {
+        margin-left: 4px;
+      }
+    }
+
+    div {
+      padding: 20px;
+    }
+
+    .item {
+      position: relative;
+      height: 44px;
+      display: block;
+      padding-right: 16px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      white-space: nowrap;
+      cursor: pointer;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.72);
+      font-family: iviSans, Arial, Helvetica, Helvetica Neue, FreeSans, sans-serif;
+      &:hover {
+        color: white;
+        background-color: #312b45;
+      }
+      .light {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background-color: #ea003d;
+      }
+    }
+  }
+}
