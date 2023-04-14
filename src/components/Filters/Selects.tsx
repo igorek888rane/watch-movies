@@ -1,6 +1,9 @@
 import {FC} from 'react';
-import styles from "@/components/Filters/Filters.module.scss";
+import styles from "./Filters.module.scss";
 import Select from "@/components/UI/Select/Select";
+
+
+
 
 const Selects:FC = () => {
     return (
