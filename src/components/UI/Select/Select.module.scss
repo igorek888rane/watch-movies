@@ -36,6 +36,7 @@
   .select_popUp{
     position: absolute;
     top:47px;
+    z-index: 5;
     background-color:$component-background-color;
     width: 100%;
 

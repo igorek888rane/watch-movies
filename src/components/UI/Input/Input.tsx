@@ -20,6 +20,7 @@ const Input: FC<InputProps> = ({name, type, label, placeholder, value, onChange}
                    placeholder={placeholder}
                    value={value}
                    onChange={onChange}/>
+            {value&&<div className={styles.input__help}>{value}</div>}
         </div>
     );
 };
