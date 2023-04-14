@@ -5,12 +5,14 @@
   flex-direction: column;
   grid-gap: 5px;
   position: relative;
+  color:$white;
 
   input {
     padding: 10px;
     background-color: $grey;
     border-radius: 5px;
     outline: none;
+    border: 0;
   }
 
   .input__help {

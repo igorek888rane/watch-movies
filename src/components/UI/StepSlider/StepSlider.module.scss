@@ -1,6 +1,8 @@
 @import "src/styles/variable";
 
-
+.name{
+  color:$white
+}
 .slider {
   position: relative;
   background-color: $component-background-color;

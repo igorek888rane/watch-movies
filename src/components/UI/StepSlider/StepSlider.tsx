@@ -1,6 +1,6 @@
 import {FC, useRef, useState} from 'react';
 import styles from './StepSlider.module.scss'
-import {computePosition} from "@/utils/computePosition";
+import {computePosition} from "./../../../utils/computePosition";
 
 
 interface StepSliderProps {
@@ -55,7 +55,7 @@ const StepSlider: FC<StepSliderProps> = ({steps, value, name, setValue}) => {
 
     return (
         <>
-            <p>{name}</p>
+            <p className={styles.name}>{name}</p>
             <div className={styles.slider} ref={sliderRef} onClick={handleClick}>
                 <div className={styles.slider__thumb}
                      style={{left: `${left}%`, cursor: `${dragging} `}}
