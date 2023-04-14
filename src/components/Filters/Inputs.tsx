@@ -6,7 +6,7 @@ const Inputs: FC = () => {
     const [director, setDirector] = useState<string>('')
     const [actor, setActor] = useState<string>('')
     return (
-        <div className={styles.filters__inputs}>
+        <div className={styles.filters__column}>
             <Input type={'text'}
                    name={'actor'}
                    label={'Поиск по актеру '}

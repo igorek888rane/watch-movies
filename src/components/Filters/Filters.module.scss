@@ -1,19 +1,26 @@
 @import 'src/styles/variable';
+
 .filters {
   display: flex;
   flex-direction: column;
-  grid-gap: 10px;
-  background-color:$container-background-color;
-  padding: 10px;
-  .filters_selects{
+  grid-gap: 25px;
+  background-color: $container-background-color;
+  padding: 20px;
+
+
+  .filters__row {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    grid-gap: 15px;
     align-items: center;
+    grid-gap: 30px;
+    .slider__item {
+      flex: 1 1;
+    }
 
   }
-  .filters__inputs{
+
+  .filters__column {
     display: flex;
     flex-direction: column;
     grid-gap: 25px;

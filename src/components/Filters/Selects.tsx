@@ -1,10 +1,10 @@
-import  {FC} from 'react';
+import {FC} from 'react';
 import styles from "@/components/Filters/Filters.module.scss";
 import Select from "@/components/UI/Select/Select";
 
 const Selects:FC = () => {
     return (
-        <div className={styles.filters_selects}>
+        <div className={styles.filters__row}>
             <Select name={'Жанры'}
                     options={[
                         'Вестерн',
