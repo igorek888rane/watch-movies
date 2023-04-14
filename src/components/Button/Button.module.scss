@@ -1,0 +1,9 @@
+@import 'src/styles/variable';
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $violet;
+  padding: 10px;
+  border-radius: 10px;
+}

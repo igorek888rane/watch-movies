@@ -1,0 +1,62 @@
+{
+    "about": {
+        "title": "О нас",
+        "links": [
+            {
+                "name": "О компании",
+                "url": "https://corp.ivi.ru/"
+            },            {
+                "name": "Вакансии",
+                "url": "https://corp.ivi.ru/career"
+            },            {
+                "name": "Программа бета-тестирования",
+                "url": "https://www.ivi.ru/pages/beta"
+            },            {
+                "name": "Информация для партнёров",
+                "url": "https://www.ivi.ru/info/partners"
+            },            {
+                "name": "Размещение рекламы",
+                "url": "https://corp.ivi.ru/advertisers"
+            },            {
+                "name": "Пользовательское соглашение",
+                "url": "https://www.ivi.ru/info/agreement"
+            },            {
+                "name": "Политика конфиденциальности",
+                "url": "https://www.ivi.ru/info/confidential"
+            },            {
+                "name": "Комплаенс",
+                "url": "https://www.ivi.ru/info/goryachaya-liniya-komplaens"
+            }
+        ]
+    },
+    "chapter": {
+        "title": "Разделы",
+        "links": [
+            {
+                "name": "Мой Иви",
+                "url": "https://www.ivi.ru/"
+            },            {
+                "name": "Что нового",
+                "url": "https://www.ivi.ru/new"
+            },            {
+                "name": "Фильмы",
+                "url": "https://www.ivi.ru/movies"
+            },            {
+                "name": "Сериалы",
+                "url": "https://www.ivi.ru/series"
+            },            {
+                "name": "Мультфильмы",
+                "url": "https://www.ivi.ru/animation"
+            },            {
+                "name": "TV+",
+                "url": "https://www.ivi.ru/tvplus"
+            },            {
+                "name": "Что посмотреть",
+                "url": "https://www.ivi.ru/goodmovies"
+            },            {
+                "name": "Активация сертификата",
+                "url": "https://www.ivi.ru/cert"
+            }
+        ]
+    }
+}
