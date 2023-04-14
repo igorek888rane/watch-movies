@@ -53,9 +53,6 @@
             },            {
                 "name": "Что посмотреть",
                 "url": "https://www.ivi.ru/goodmovies"
-            },            {
-                "name": "Активация сертификата",
-                "url": "https://www.ivi.ru/cert"
             }
         ]
     }
