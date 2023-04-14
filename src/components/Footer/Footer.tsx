@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import styles from './Footer.module.scss';
 import data from './footerData.json';
-import Button from '@/components/Button/Button';
+import Button from '@/components/UI/Button/Button';
 
 const Footer: FC = () => {
   const [btnPopupOpen, setBtnPopupOpen] = useState<boolean>(false);

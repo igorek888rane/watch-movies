@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './PopUp.module.scss';
 import { sortList } from './PopUpItem';
 
+
 export const PopUp: React.FC = () => {
   const [open, setOpen] = React.useState<boolean>(false);
   const [selected, setSelected] = React.useState<number>(0);
@@ -38,11 +39,11 @@ export const PopUp: React.FC = () => {
             {selectedName.includes('По') ? selectedName : 'По ' + selectedName}
           </span>
         </div>
-        <div className={styles.icon_div}>
+        <div >
           <img
-            src='/img/icons/arrow_down.svg'
+            src='/arrow_down.svg'
             width={16}
-            className={open == false ? styles.svg_arrowDown : styles.svg_arrowUp}
+            className={!open ? styles.svg_arrowDown : styles.svg_arrowUp}
           />
         </div>
       </div>

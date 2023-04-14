@@ -53,14 +53,12 @@
   .list_item {
     position: absolute;
     top: 32px;
-    z-index: 2;
+    z-index: 100;
     width: 250px;
-    height: 540px;
     background-color: #1f1b2e;
     display: inline-block;
     padding-top: 8px;
     padding-bottom: 12px;
-    background-color: #1f1b2e;
     box-shadow: 0 20px 40px rgba(7, 5, 14, 0.4);
     .default_item {
       margin: 4px 0 12px 4px;

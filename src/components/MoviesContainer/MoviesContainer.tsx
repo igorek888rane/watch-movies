@@ -1,13 +1,14 @@
 import React from 'react';
-import styles from './Movies.module.scss';
-import { PopUp } from '../PopUp/PopUp';
+import {PopUp} from '../UI/PopUp/PopUp';
+import Filters from "@/components/Filters/Filters";
 
 const MoviesContainer = () => {
-  return (
-    <div className="container">
-      Movies
-    </div>
-  )
+    return (
+        <div className={'container'}>
+                <PopUp/>
+                <Filters/>
+        </div>
+    )
 };
 
 export default MoviesContainer;

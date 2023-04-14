@@ -1,4 +1,5 @@
-.container {
-  max-width: 1215px;
-  margin: 0 auto;
+.movies {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 15px;
 }
