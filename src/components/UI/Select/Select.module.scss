@@ -1,0 +1,58 @@
+@import 'src/styles/variable';
+
+.select {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  max-width: 200px;
+  width: 100%;
+  position: relative;
+
+  .select__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $component-background-color;
+    color: $white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+
+
+    &.active {
+      background-color: $grey;
+    }
+
+    .select__name {
+      font-size: 20px;
+    }
+
+    .select__arrow {
+      &.up {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .select_popUp {
+    position: absolute;
+    top: 47px;
+    z-index: 5;
+    background-color: $component-background-color;
+    width: 100%;
+    color: $white;
+
+    .select__item {
+      cursor: pointer;
+      padding: 10px;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .select {
+    max-width: 100%;
+  }
+}
