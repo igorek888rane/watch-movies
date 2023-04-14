@@ -1,19 +1,6 @@
 import React from 'react';
 import styles from './PopUp.module.scss';
-
-const sortList = [
-  'По популярности',
-  'Дате добавления',
-  'Рейтингу IMDB',
-  'Сборам',
-  'Бюджетам',
-  'Новизне',
-  'Рейтингу Иви',
-  'Рейтингу Иви: режиссура',
-  'Рейтингу Иви: сюжет',
-  'Рейтингу Иви: зрелищность',
-  'Рейтингу Иви: актеры',
-];
+import { sortList } from './PopUpItem';
 
 export const PopUp: React.FC = () => {
   const [open, setOpen] = React.useState<boolean>(false);
@@ -64,14 +51,12 @@ export const PopUp: React.FC = () => {
           <div className={styles.default_item}>
             <span>Сортировать</span>
           </div>
-          {sortList.map((elm, idx) => {
-            return (
-              <div onClick={() => onClickSort(idx)} className={styles.item} key={idx}>
-                <span className={selected === idx ? styles.light : ''}></span>
-                <p>{elm}</p>
-              </div>
-            );
-          })}
+          {sortList.map((elm, idx) => (
+            <div onClick={() => onClickSort(idx)} className={styles.item} key={idx}>
+              <span className={selected === idx ? styles.light : ''}></span>
+              <p>{elm}</p>
+            </div>
+          ))}
         </div>
       )}
     </div>
