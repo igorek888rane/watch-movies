@@ -1,25 +1,54 @@
 @import 'variable';
 @import 'reset';
+@import 'fonts';
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  font-family: 'iviSans', 'Arial', 'sans-serif';
+  font-weight: 400;
+  font-size: 16px;
 }
 body {
   background-color: $body-background-color;
   color: $white;
 }
-a {
-  color: inherit;
-  text-decoration: none;
-}
 .container {
-  max-width: 1215px;
+  max-width: 1240px;
   margin: 0 auto;
+  padding: 0px 12px 0px 12px;
+}
+.list {
+  margin: 0;
+}
+.list__title {
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.list__items {
+}
+.list__item {
+  margin: 8px 0 0;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $grey;
+}
+.list__link {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.list__link_type_grey {
+  color: $grey;
+  transition: all ease 0.5s;
+}
+.list__link_type_grey:hover {
+  color: $white;
+}
+.list__link_type_white {
+  color: $white;
+  transition: all ease 0.5s;
+}
+.list__link_type_white:hover {
+  color: $grey;
 }

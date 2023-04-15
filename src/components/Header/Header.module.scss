@@ -1,2 +1,96 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.123);
+
+  &__left {
+    display: flex;
+  }
+
+  &__right {
+  }
+}
+.logotype {
+  width: 66px;
+  height: 48px;
+  margin-right: 25px;
+}
+
+.nav {
+  display: flex;
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin: 0 9px 0 9px;
+  }
+
+  &__link {
+    padding: 10px 0px 10px 0px;
+    color: rgba(255, 255, 255, 0.48);
+    font-family: 'iviSans';
+    font-weight: 600;
+    font-size: 15px;
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+.actions {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
+
+  &__item {
+  }
+}
+
+// В компонент button
+.watchButton {
+  color: white;
+  background-color: #ea003d;
+  padding: 8px 11px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: iviSans;
+  font-weight: 600;
+}
+.searchText {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: grey;
+  background-color: #191329;
+}
+.searchButton {
+  width: 35px;
+  height: 35px;
+  background-color: #191329;
+}
+.ringButton {
+  width: 20px;
+  height: 20px;
+  background-color: #191329;
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid grey;
+  border-radius: 8px;
+}
+.accountButton {
+  width: 23px;
+  height: 23px;
+  background-color: #191329;
 }
