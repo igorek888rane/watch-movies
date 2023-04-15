@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import Button from '../Button/Button';
 import styles from './Header.module.scss';
 import searchSvg from '../../assets/img/icons/search.svg';
 import ringSvg from '../../assets/img/icons/ring.svg';
 import accountSvg from '../../assets/img/icons/account.svg';
+import Button from "@/components/UI/Button/Button";
 
 const Header: FC = () => {
   return (
