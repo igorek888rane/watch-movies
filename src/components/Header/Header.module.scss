@@ -64,11 +64,15 @@
   font-weight: 600;
 }
 .searchText {
+  filter: brightness(0.4);
   font-weight: 600;
   display: flex;
   align-items: center;
-  color: grey;
+  color: white;
   background-color: #191329;
+  &:hover {
+    filter: brightness(1);
+  }
 }
 .searchButton {
   width: 35px;
@@ -76,18 +80,26 @@
   background-color: #191329;
 }
 .ringButton {
+  filter: brightness(0.4);
   width: 20px;
   height: 20px;
   background-color: #191329;
+  &:hover {
+    filter: brightness(1);
+  }
 }
 .buttonWrapper {
+  filter: brightness(0.4);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 48px;
   height: 48px;
-  border: 2px solid grey;
+  border: 2px solid white;
   border-radius: 8px;
+  &:hover {
+    filter: brightness(1);
+  }
 }
 .accountButton {
   width: 23px;
