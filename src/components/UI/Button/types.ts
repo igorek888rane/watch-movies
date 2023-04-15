@@ -1,3 +1,13 @@
+import { MouseEventHandler } from 'react';
+
 export interface ButtonPropsTypes {
-    url: string
+  onClick?: MouseEventHandler;
+  type?: string;
+  url?: string;
+  imgLeft?: string;
+  imgRight?: string;
+  text?: string;
+  container?: any; // ТИП
+  imgLeftContainer?: any; // ТИП
+  imgRightContainer?: any; // ТИП
 }

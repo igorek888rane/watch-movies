@@ -1,13 +1,60 @@
-import { FC, PropsWithChildren} from 'react';
-import { ButtonPropsTypes } from '@/components/UI/Button/types';
-import styles from './Button.module.scss'
+import { FC, PropsWithChildren } from 'react';
+import { ButtonPropsTypes } from '@/components/Button/types';
+import Image from 'next/image';
 
-const Button: FC<PropsWithChildren<ButtonPropsTypes>> = ({url, children}) => {
+const Button: FC<PropsWithChildren<ButtonPropsTypes>> = ({
+  onClick,
+  type = 'Button',
+  url,
+  imgLeft = '',
+  imgLeftContainer = '',
+  imgRight = '',
+  imgRightContainer = '',
+  text,
+  container = '',
+}) => {
+  if (type === 'Button') {
     return (
-        <a href={url} target="_blank" className={styles.button}>
-            {children}
-        </a>
+      <button onClick={onClick} className={container}>
+        {imgLeft ? (
+          <Image alt="logo" className={imgLeftContainer} src={imgLeft}></Image>
+        ) : (
+          ''
+        )}
+        {text}
+        {imgRight ? (
+          <Image
+            alt="logo"
+            className={imgRightContainer}
+            src={imgRight}
+          ></Image>
+        ) : (
+          ''
+        )}
+      </button>
     );
+  }
+  if (type === 'Link') {
+    return (
+      <a href={url} target="_blank" className={container}>
+        {imgLeft ? (
+          <Image alt="logo" className={imgLeftContainer} src={imgLeft}></Image>
+        ) : (
+          ''
+        )}
+        {text}
+        {imgRight ? (
+          <Image
+            alt="logo"
+            className={imgRightContainer}
+            src={imgRight}
+          ></Image>
+        ) : (
+          ''
+        )}
+      </a>
+    );
+  } else return <div></div>;
 };
 
 export default Button;
