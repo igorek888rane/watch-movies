@@ -22,9 +22,6 @@ const Header: FC = () => {
                 <a className={styles.nav__link}>Мой Иви</a>
               </li>
               <li className={styles.nav__item}>
-                <a className={styles.nav__link}>Мой Иви</a>
-              </li>
-              <li className={styles.nav__item}>
                 <a className={styles.nav__link}>Что нового</a>
               </li>
               <li className={styles.nav__item}>
