@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
-import { ButtonPropsTypes } from '@/components/Button/types';
+import { ButtonPropsTypes } from './types';
 import Image from 'next/image';
 
 const Button: FC<PropsWithChildren<ButtonPropsTypes>> = ({
@@ -12,6 +12,7 @@ const Button: FC<PropsWithChildren<ButtonPropsTypes>> = ({
   imgRightContainer = '',
   text,
   container = '',
+  children,
 }) => {
   if (type === 'Button') {
     return (
@@ -31,6 +32,7 @@ const Button: FC<PropsWithChildren<ButtonPropsTypes>> = ({
         ) : (
           ''
         )}
+        {children}
       </button>
     );
   }
@@ -52,6 +54,7 @@ const Button: FC<PropsWithChildren<ButtonPropsTypes>> = ({
         ) : (
           ''
         )}
+        {children}
       </a>
     );
   } else return <div></div>;

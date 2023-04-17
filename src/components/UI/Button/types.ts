@@ -10,4 +10,5 @@ export interface ButtonPropsTypes {
   container?: any; // ТИП
   imgLeftContainer?: any; // ТИП
   imgRightContainer?: any; // ТИП
+  children?: React.ReactNode;
 }
