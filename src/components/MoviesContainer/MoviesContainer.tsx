@@ -1,20 +1,19 @@
-import React from 'react';
-import { PopUp } from '../UI/PopUp/PopUp';
+import {FC} from 'react';
+import styles from './Movies.module.scss'
+import {PopUp} from '../UI/PopUp/PopUp';
 import Filters from '@/components/Filters/Filters';
-import { Cart } from '../Cart/Cart';
+import MoviesCards from "@/components/MoviesCards/MoviesCards";
 
-const MoviesContainer = () => {
-  return (
-    <div>
-      <div className={'container'}>
-        <PopUp />
-        <Filters />
-      </div>
-      <div>
-        <Cart />
-      </div>
-    </div>
-  );
+const MoviesContainer: FC = () => {
+    return (
+        <div className={`${styles.movies} container`}>
+            <PopUp/>
+            <Filters/>
+            <MoviesCards/>
+            {/*<div className={styles.movies__cards}>*/}
+            {/*</div>*/}
+        </div>
+    );
 };
 
 export default MoviesContainer;

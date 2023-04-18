@@ -7,7 +7,6 @@
   max-width: 200px;
   width: 100%;
   position: relative;
-
   .select__btn {
     display: flex;
     align-items: center;
@@ -30,6 +29,8 @@
     }
 
     .select__arrow {
+      display: flex;
+      align-items: center;
       &.up {
         transform: rotate(180deg);
       }

@@ -1,5 +1,11 @@
 .movies {
   display: flex;
   flex-direction: column;
-  grid-gap: 15px;
+  grid-gap: 25px;
+
+  //.movies__cards {
+  //  display: flex;
+  //  justify-content: center;
+  //  align-items: center;
+  //}
 }
