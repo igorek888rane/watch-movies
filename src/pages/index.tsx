@@ -1,9 +1,5 @@
-import Layout from "@/components/Layout/Layout";
+import Layout from '@/components/Layout/Layout'
 
 export default function Home() {
-    return (
-       <Layout title={'HomePage'}>
-               HomePage
-       </Layout>
-    )
+	return <Layout title={'HomePage'}>HomePage</Layout>
 }

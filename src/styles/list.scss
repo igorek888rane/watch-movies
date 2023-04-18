@@ -1,6 +1,7 @@
 .list {
   margin: 0;
 }
+
 .list__title {
   margin: 0 0 8px;
   font-size: 15px;
@@ -8,6 +9,7 @@
   font-weight: 700;
   color: $white;
 }
+
 .list__item {
   margin: 8px 0 0;
   font-size: 15px;
@@ -15,25 +17,31 @@
   font-weight: 400;
   color: $grey;
 }
+
 .list__link {
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
 }
+
 .list__link_type_grey {
   color: $grey;
   transition: all ease 0.5s;
 }
+
 .list__link_type_grey:hover {
   color: $white;
 }
+
 .list__link_type_white {
   color: $white;
   transition: all ease 0.5s;
 }
+
 .list__link_type_white:hover {
   color: $grey;
 }
+
 .list__link_type_violet {
   background-image: linear-gradient(-45deg, #c447ff, #ea003d);
   -webkit-background-clip: text;
@@ -41,6 +49,7 @@
   -webkit-text-fill-color: transparent;
   transition: all ease 0.5s;
 }
+
 .list__link_type_violet:hover {
   opacity: 0.8;
 }

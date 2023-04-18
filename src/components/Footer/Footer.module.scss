@@ -9,11 +9,13 @@
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
   }
+
   .footer__container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
+
   .footer__button {
     display: flex;
     align-items: center;
@@ -24,24 +26,29 @@
     color: $white;
     margin: 0;
     transition: all ease 0.5s;
+
     &:hover {
       background-color: $btnHover;
     }
+
     &_type {
       &_rectangle {
         border-radius: 8px;
         padding: 5px 10px;
       }
+
       &_circle {
         padding: 10px 10px;
         border-radius: 50%;
       }
     }
   }
+
   .footer__buttonText {
     margin: 0;
     padding: 5px 30px;
   }
+
   .footer__image {
     align-self: center;
     width: 104px;
@@ -49,21 +56,22 @@
     border-radius: 20px;
     display: flex;
     background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(var(#a869f0)),
-      to(var(--end-gradient-color))
+                    linear,
+                    left top,
+                    left bottom,
+                    from(var(#a869f0)),
+                    to(var(--end-gradient-color))
     );
     background: -webkit-linear-gradient(
-      top,
-      var(#a869f0) 0%,
-      var(#834cc2) 100%
+                    top,
+                    var(#a869f0) 0%,
+                    var(#834cc2) 100%
     );
     background: -o-linear-gradient(top, #a869f0 0%, #834cc2 100%);
     background: linear-gradient(180deg, #a869f0 0%, #834cc2 100%);
     box-shadow: 0 0 104px #a869f0;
   }
+
   .footer__icon {
     background-image: url('../../assets/img/icons/megaphone.svg');
     width: 56px;
@@ -73,24 +81,30 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+
   .footer__text {
     margin: 20px 0 0;
     text-align: center;
     max-width: 280px;
   }
+
   .footer__desc {
     margin: 0 0 10px;
   }
+
   .footer__links {
     display: flex;
     margin: 12px 0 24px;
   }
+
   .footer__link {
     margin: 0 8px 0 0;
+
     &_relative {
       position: relative;
     }
   }
+
   .footer__btn {
     display: flex;
     justify-content: center;
@@ -99,25 +113,30 @@
     padding: 10px;
     border-radius: 10px;
     transition: all ease 0.5s;
+
     &:hover {
       background-color: $btnHover;
     }
   }
+
   .footer__btnIcon {
     width: 16px;
     height: 16px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+
     &_type {
       &_mail {
         margin: 5px 0;
       }
+
       &_phone {
         background-image: url('../../assets/img/icons/phone-call.svg');
       }
     }
   }
+
   .footer__btnPopup {
     display: none;
     flex-direction: column;
@@ -130,22 +149,28 @@
     top: 50px;
     left: -44px;
     transition: all ease 0.5s;
+
     &:hover {
       background-color: $btnHover;
     }
+
     &_opened {
       display: flex;
     }
   }
+
   .footer__btnPopup_opened {
     display: flex;
   }
+
   .footer__btnPopupPhone {
     margin: 0;
   }
+
   .footer__btnPopupText {
     margin: 0;
   }
+
   .footer__deviceIcon {
     width: 20px;
     height: 20px;
@@ -153,6 +178,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin: 0 8px 0 0;
+
     &_type {
       &_allDevices {
         margin: 6px 8px 6px 10px;
@@ -160,26 +186,32 @@
       }
     }
   }
+
   .footer__deviceText {
     font-size: 10px;
     line-height: 12px;
     font-weight: 500;
     font-style: normal;
   }
+
   .footer__deviceTitle {
     margin: 0 10px 0 0;
   }
+
   .footer__socials {
     display: flex;
     margin: 0 0 20px;
   }
+
   .footer__social {
     border-radius: 50%;
     margin: 0 0 0 12px;
+
     &:first-of-type {
       margin: 0;
     }
   }
+
   .footer__socialIcon {
     width: 16px;
     height: 16px;

@@ -1,16 +1,16 @@
-import {combineReducers, configureStore} from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import movies from './slices/MoviesSlice/MoviesSlice'
+
 const rootReducer = combineReducers({
-    movies
+	movies,
 })
 
 export const createReduxStore = (initialState = {}) => {
-    return configureStore({
-        reducer: rootReducer,
-        preloadedState: initialState
-    })
+	return configureStore({
+		reducer: rootReducer,
+		preloadedState: initialState,
+	})
 }
-
 
 export type RootState = ReturnType<typeof rootReducer>
 export type AppStore = ReturnType<typeof createReduxStore>

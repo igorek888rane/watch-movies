@@ -32,6 +32,7 @@
     "@storybook/nextjs": "^7.0.4",
     "@storybook/react": "^7.0.4",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "prettier": "^2.8.7",
     "storybook": "^7.0.4"
   }
 }
