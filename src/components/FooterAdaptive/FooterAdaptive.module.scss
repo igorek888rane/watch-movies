@@ -1,22 +1,85 @@
 @import '../../styles/variable.scss';
+@keyframes showBurger {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .footer {
   .footer__wrapper {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 48px 0;
-    margin: 0 10px;
+    padding: 10px 0;
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
   }
-  .footer__container {
+  .footer__menu {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    padding: 32px;
+    border-bottom: 1px solid $border-color;
+  }
+  .footer__list {
+    margin: 0 0 10px;
+  }
+  .footer__menuTitle {
+    display: flex;
+    align-items: center;
+    width: 240px;
+  }
+  .footer__menuBtn {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    margin: 0 0 8px 8px;
+    &:first-of-type {
+      margin: 0 8px 8px 0;
+    }
+  }
+  .footer__menuIcon {
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .footer__menuContent {
+    display: none;
+    opacity: 0;
+    transform: translateY(-30px);
+    width: 100%;
+    margin: 0 0 20px;
+    &_opened {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      animation-name: showBurger;
+      animation-duration: 0.8s;
+      animation-fill-mode: forwards;
+    }
+  }
+  .footer__publics {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px;
+  }
+  .footer__public {
+    border-radius: 50%;
+    margin: 0 12px 0 0;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .footer__desc {
+    margin: 0 0 10px;
   }
   .footer__button {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: $violet;
     font-size: 15px;
     line-height: 20px;
@@ -38,48 +101,10 @@
       }
     }
   }
+
   .footer__buttonText {
     margin: 0;
     padding: 5px 30px;
-  }
-  .footer__image {
-    align-self: center;
-    width: 104px;
-    height: 104px;
-    border-radius: 20px;
-    display: flex;
-    background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(var(#a869f0)),
-      to(var(--end-gradient-color))
-    );
-    background: -webkit-linear-gradient(
-      top,
-      var(#a869f0) 0%,
-      var(#834cc2) 100%
-    );
-    background: -o-linear-gradient(top, #a869f0 0%, #834cc2 100%);
-    background: linear-gradient(180deg, #a869f0 0%, #834cc2 100%);
-    box-shadow: 0 0 104px #a869f0;
-  }
-  .footer__icon {
-    background-image: url('../../assets/img/icons/megaphone.svg');
-    width: 56px;
-    height: 56px;
-    margin: auto;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .footer__text {
-    margin: 20px 0 0;
-    text-align: center;
-    max-width: 280px;
-  }
-  .footer__desc {
-    margin: 0 0 10px;
   }
   .footer__links {
     display: flex;
@@ -118,6 +143,7 @@
       }
     }
   }
+
   .footer__btnPopup {
     display: none;
     flex-direction: column;
@@ -167,13 +193,16 @@
     font-style: normal;
   }
   .footer__deviceTitle {
-    margin: 0 10px 0 0;
+    margin: 0;
   }
   .footer__socials {
     display: flex;
-    margin: 0 0 20px;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
   }
   .footer__social {
+    width: 182px;
     border-radius: 50%;
     margin: 0 0 0 12px;
     &:first-of-type {
@@ -186,26 +215,31 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    // &_type {
-    //   &_vk {
-    //     background-image: url('../../assets/img/icons/vk.svg');
-    //   }
-    //   &_ok {
-    //     background-image: url('../../assets/img/icons/odnoklassniki.svg');
-    //   }
-    //   &_twitter {
-    //     background-image: url('../../assets/img/icons/twitter.svg');
-    //   }
-    //   &_vb {
-    //     background-image: url('../../assets/img/icons/viber.svg');
-    //   }
+  }
+}
 
-    //   &_linkedin {
-    //     background-image: url('../../assets/img/icons/linkedin.svg');
-    //   }
-    //   &_tgrm {
-    //     background-image: url('../../assets/img/icons/telegram.svg');
-    //   }
-    // }
+@media screen and (max-width: 840px) {
+  .footer {
+    .footer__socials {
+      max-width: 396px;
+      margin: 0 auto;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footer__social {
+      border-radius: 50%;
+      margin: 0 8px 12px;
+      &:first-of-type {
+        margin: 0 8px 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer {
+    .footer__menu {
+      padding: 32px 0;
+    }
   }
 }

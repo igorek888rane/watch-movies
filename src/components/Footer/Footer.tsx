@@ -1,7 +1,18 @@
 import { FC, useState } from 'react';
 import styles from './Footer.module.scss';
-import data from './footerData.json';
+import data from '../../data/footerData.json';
 import Button from '@/components/UI/Button/Button';
+import mailIcon from '../../assets/img/icons/mail.svg';
+import appleIcon from '../../assets/img/icons/apple-white.svg';
+import googleIcon from '../../assets/img/icons/google-play.svg';
+import smartTVIcon from '../../assets/img/icons/tv.svg';
+import allDevicesIcon from '../../assets/img/icons/monitor-phone.svg';
+import vkIcon from '../../assets/img/icons/vk.svg';
+import odnoklassnikiIcon from '../../assets/img/icons/odnoklassniki.svg';
+import twitterIcon from '../../assets/img/icons/twitter.svg';
+import viberIcon from '../../assets/img/icons/viber.svg';
+import linkedinIcon from '../../assets/img/icons/linkedin.svg';
+import telegramIcon from '../../assets/img/icons/telegram.svg';
 
 const Footer: FC = () => {
   const [btnPopupOpen, setBtnPopupOpen] = useState<boolean>(false);
@@ -14,7 +25,7 @@ const Footer: FC = () => {
     <footer className={`${styles.footer} container`}>
       <div className={styles.footer__wrapper}>
         {' '}
-        <div className="list">
+        <nav className="list">
           <h2 className="list__title">{data.about.title}</h2>
           <ul className="list__items">
             {data.about.links.map((el) => {
@@ -29,10 +40,10 @@ const Footer: FC = () => {
                   </a>
                 </li>
               );
-            })}              
+            })}
           </ul>
-        </div>
-        <div className="list">
+        </nav>
+        <nav className="list">
           <h2 className="list__title">{data.chapter.title}</h2>
           <ul className="list__items">
             {data.chapter.links.map((el) => {
@@ -49,16 +60,16 @@ const Footer: FC = () => {
               );
             })}
             <li className="list__item">
-                  <a
-                    className="list__link list__link_type_violet"
-                    href="https://www.ivi.ru/cert"
-                    target="_blank"
-                  >
-                    Активация сертификата
-                  </a>
-                </li>
+              <a
+                className="list__link list__link_type_violet"
+                href="https://www.ivi.ru/cert"
+                target="_blank"
+              >
+                Активация сертификата
+              </a>
+            </li>
           </ul>
-        </div>
+        </nav>
         <div className={styles.footer__container}>
           <h2 className="list__title">Служба поддержки</h2>
           <p className={`${styles.footer__desc} list__item`}>
@@ -66,19 +77,26 @@ const Footer: FC = () => {
             <br />
             Наши операторы онлайн 24/7
           </p>
-          <Button url="https://www.ivi.ru/profile">
+          <Button
+            type="Link"
+            url="https://www.ivi.ru/profile"
+            container={`${styles.footer__button} ${styles.footer__button_type_rectangle}`}
+          >
+            {' '}
             <p className={`list__title ${styles.footer__buttonText}`}>
               Написать в чате
             </p>
           </Button>
+
           <ul className={styles.footer__links}>
             <li className={styles.footer__link}>
-              {' '}
-              <Button url="mailto:support@ivi.ru">
-                <div
-                  className={`${styles.footer__btnIcon} ${styles.footer__btnIcon_type_mail}`}
-                ></div>
-              </Button>
+              <Button
+                type="Link"
+                url="mailto:support@ivi.ru"
+                container={`${styles.footer__button} ${styles.footer__button_type_rectangle}`}
+                imgLeft={mailIcon}
+                imgLeftContainer={`${styles.footer__btnIcon} ${styles.footer__btnIcon_type_mail}`}
+              />
             </li>
             <li
               className={`${styles.footer__link} ${styles.footer__link_relative}`}
@@ -127,53 +145,72 @@ const Footer: FC = () => {
 
       <div className={styles.footer__wrapper}>
         <div className={styles.footer__container}>
-   
-            <ul className={`${styles.footer__socials} list`}>
-              <li className={`${styles.footer__social} list__item`}>
-                <Button url="https://go.onelink.me/app/devicesiOS">
-                  <div
-                    className={`${styles.footer__deviceIcon} ${styles.footer__deviceIcon_type_apple}`}
-                  ></div>
-                  <div>
-                    <div className={styles.footer__deviceText}>Загрузить в</div>
-                    <div className={`${styles.footer__deviceTitle} list__title`}>App Store</div>
+          <ul className={`${styles.footer__socials} list`}>
+            <li className={`${styles.footer__social} list__item`}>
+              <Button
+                type="Link"
+                url="https://go.onelink.me/app/devicesiOS"
+                container={`${styles.footer__button} ${styles.footer__button_type_rectangle}`}
+                imgLeft={appleIcon}
+                imgLeftContainer={styles.footer__deviceIcon}
+              >
+                <div>
+                  {' '}
+                  <div className={styles.footer__deviceText}>Загрузить в</div>
+                  <div className={`${styles.footer__deviceTitle} list__title`}>
+                    App Store
                   </div>
-                </Button>
-              </li>
-              <li className={`${styles.footer__social} list__item`}>
-                <Button url="https://go.onelink.me/app/devicesAndroid">
-                  <div
-                    className={`${styles.footer__deviceIcon} ${styles.footer__deviceIcon_type_android}`}
-                  ></div>
-                  <div>
-                    <div className={styles.footer__deviceText}>Доступно в</div>
-                    <div className={`${styles.footer__deviceTitle} list__title`}>Google Play</div>
+                </div>
+              </Button>
+            </li>
+            <li className={`${styles.footer__social} list__item`}>
+              <Button
+                type="Link"
+                url="https://go.onelink.me/app/devicesAndroid"
+                container={`${styles.footer__button} ${styles.footer__button_type_rectangle}`}
+                imgLeft={googleIcon}
+                imgLeftContainer={styles.footer__deviceIcon}
+              >
+                <div>
+                  <div className={styles.footer__deviceText}>Доступно в</div>
+                  <div className={`${styles.footer__deviceTitle} list__title`}>
+                    Google Play
                   </div>
-                </Button>
-              </li>
-              <li className={`${styles.footer__social} list__item`}>
-                <Button url="https://www.ivi.ru/pages/tvsmart">
-                  <div
-                    className={`${styles.footer__deviceIcon} ${styles.footer__deviceIcon_type_smartTV}`}
-                  ></div>
-                  <div>
-                    <div className={styles.footer__deviceText}>Смотрите на</div>
-                    <div className={`${styles.footer__deviceTitle} list__title`}>Smart TV</div>
+                </div>
+              </Button>
+            </li>
+            <li className={`${styles.footer__social} list__item`}>
+              <Button
+                type="Link"
+                url="https://www.ivi.ru/pages/tvsmart"
+                container={`${styles.footer__button} ${styles.footer__button_type_rectangle}`}
+                imgLeft={smartTVIcon}
+                imgLeftContainer={styles.footer__deviceIcon}
+              >
+                <div>
+                  <div className={styles.footer__deviceText}>Смотрите на</div>
+                  <div className={`${styles.footer__deviceTitle} list__title`}>
+                    Smart TV
                   </div>
-                </Button>
-              </li>
-              <li className={`${styles.footer__social} list__item`}>
-                <Button url="https://www.ivi.ru/devices">
-                  <div
-                    className={`${styles.footer__deviceIcon} ${styles.footer__deviceIcon_type_allDevices}`}
-                  ></div>
-                  <div>
-                    <div className={`${styles.footer__deviceTitle} list__title`}>Все устройства</div>
+                </div>
+              </Button>
+            </li>
+            <li className={`${styles.footer__social} list__item`}>
+              <Button
+                type="Link"
+                url="https://www.ivi.ru/pages/tvsmart"
+                container={`${styles.footer__button} ${styles.footer__button_type_rectangle}`}
+                imgLeft={allDevicesIcon}
+                imgLeftContainer={`${styles.footer__deviceIcon} ${styles.footer__deviceIcon_type_allDevices}`}
+              >
+                <div>
+                  <div className={`${styles.footer__deviceTitle} list__title`}>
+                    Все устройства
                   </div>
-                </Button>
-              </li>
-            </ul>
-    
+                </div>
+              </Button>
+            </li>
+          </ul>
 
           <p className="list__item">
             &#169; 2023 ООО «Иви.ру»
@@ -184,53 +221,58 @@ const Footer: FC = () => {
         </div>
         <ul className={`${styles.footer__socials} list`}>
           <li className={`${styles.footer__social} list__item`}>
-            <Button url="https://vk.com/iviru">
-              <div
-                className={`${styles.footer__socialIcon} ${styles.footer__socialIcon_type_vk}`}
-              ></div>
-            </Button>
+            <Button
+              type="Link"
+              url="https://vk.com/iviru"
+              container={`${styles.footer__button} ${styles.footer__button_type_circle}`}
+              imgLeft={vkIcon}
+              imgLeftContainer={styles.footer__socialIcon}
+            ></Button>
           </li>
           <li className={`${styles.footer__social} list__item`}>
-            <Button url="https://ok.ru/ivi.ru">
-              <div
-                className={`${styles.footer__socialIcon} ${styles.footer__socialIcon_type_ok}`}
-              ></div>
-            </Button>
+            <Button
+              type="Link"
+              url="https://ok.ru/ivi.ru"
+              container={`${styles.footer__button} ${styles.footer__button_type_circle}`}
+              imgLeft={odnoklassnikiIcon}
+              imgLeftContainer={styles.footer__socialIcon}
+            ></Button>
           </li>
           <li className={`${styles.footer__social} list__item`}>
-            {' '}
-            <Button url="https://twitter.com/ivi_ru">
-              {' '}
-              <div
-                className={`${styles.footer__socialIcon} ${styles.footer__socialIcon_type_twitter}`}
-              ></div>
-            </Button>
+            <Button
+              type="Link"
+              url="https://twitter.com/ivi_ru"
+              container={`${styles.footer__button} ${styles.footer__button_type_circle}`}
+              imgLeft={twitterIcon}
+              imgLeftContainer={styles.footer__socialIcon}
+            ></Button>
           </li>
           <li className={`${styles.footer__social} list__item`}>
-            {' '}
-            <Button url="https://vb.me/a0544c">
-              {' '}
-              <div
-                className={`${styles.footer__socialIcon} ${styles.footer__socialIcon_type_vb}`}
-              ></div>
-            </Button>
+            <Button
+              type="Link"
+              url="https://vb.me/a0544c"
+              container={`${styles.footer__button} ${styles.footer__button_type_circle}`}
+              imgLeft={viberIcon}
+              imgLeftContainer={styles.footer__socialIcon}
+            ></Button>
           </li>
           <li className={`${styles.footer__social} list__item`}>
-            {' '}
-            <Button url="https://www.linkedin.com/company/2543415/">
-              {' '}
-              <div
-                className={`${styles.footer__socialIcon} ${styles.footer__socialIcon_type_linkedin}`}
-              ></div>
-            </Button>
+            <Button
+              type="Link"
+              url="https://www.linkedin.com/company/2543415/"
+              container={`${styles.footer__button} ${styles.footer__button_type_circle}`}
+              imgLeft={linkedinIcon}
+              imgLeftContainer={styles.footer__socialIcon}
+            ></Button>
           </li>
           <li className={`${styles.footer__social} list__item`}>
-            <Button url="https://t.me/official_iviru">
-              {' '}
-              <div
-                className={`${styles.footer__socialIcon} ${styles.footer__socialIcon_type_tgrm}`}
-              ></div>
-            </Button>
+            <Button
+              type="Link"
+              url="https://t.me/official_iviru"
+              container={`${styles.footer__button} ${styles.footer__button_type_circle}`}
+              imgLeft={telegramIcon}
+              imgLeftContainer={styles.footer__socialIcon}
+            ></Button>
           </li>
         </ul>
       </div>
