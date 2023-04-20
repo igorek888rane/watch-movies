@@ -12,11 +12,13 @@ const Button: FC<PropsWithChildren<ButtonPropsTypes>> = ({
 	imgRightContainer = '',
 	text,
 	container = '',
+	linkTarget = '',
+	id = '',
 	children,
 }) => {
 	if (type === 'Button') {
 		return (
-			<button onClick={onClick} className={container}>
+			<button onClick={onClick} className={container} id={id}>
 				{imgLeft ? (
 					<Image alt='logo' className={imgLeftContainer} src={imgLeft}></Image>
 				) : (
@@ -38,7 +40,12 @@ const Button: FC<PropsWithChildren<ButtonPropsTypes>> = ({
 	}
 	if (type === 'Link') {
 		return (
-			<a href={url} target='_blank' className={container}>
+			<a
+				href={url}
+				target={`${linkTarget == 'self' ? '_self' : '_blank'}`}
+				className={container}
+				id={id}
+			>
 				{imgLeft ? (
 					<Image alt='logo' className={imgLeftContainer} src={imgLeft}></Image>
 				) : (

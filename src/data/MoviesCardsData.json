@@ -1,16 +1,16 @@
 [
   {
-    "id":1,
-    "title":"Рыцарь теней",
-    "imageUrl":"https://thumbs.dfs.ivi.ru/storage15/contents/5/4/9ae4e87ca3503e4a2295cd045d902d.jpg/234x360/?q=85",
-    "types":0,
-    "duration":104,
-    "age":"6+",
-    "yearIssue":2019,
-    "genre":"Фэнтези",
-    "country":"Китай",
-    "typesS":"актёры",
-    "rating":7.8
+    "id": 1,
+    "title": "Рыцарь теней",
+    "imageUrl": "https://thumbs.dfs.ivi.ru/storage15/contents/5/4/9ae4e87ca3503e4a2295cd045d902d.jpg/234x360/?q=85",
+    "types": 0,
+    "duration": 104,
+    "age": "6+",
+    "yearIssue": 2019,
+    "genre": "Фэнтези",
+    "country": "Китай",
+    "typesS": "актёры",
+    "rating": 7.8
   },
   {
     "id": 2,

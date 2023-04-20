@@ -3,6 +3,7 @@ import styles from './Footer.module.scss'
 import data from '../../data/footerData.json'
 import Button from '@/components/UI/Button/Button'
 import mailIcon from '../../assets/img/icons/mail.svg'
+import phoneIcon from '../../assets/img/icons/phone-call.svg'
 import appleIcon from '../../assets/img/icons/apple-white.svg'
 import googleIcon from '../../assets/img/icons/google-play.svg'
 import smartTVIcon from '../../assets/img/icons/tv.svg'
@@ -24,7 +25,6 @@ const Footer: FC = () => {
 	return (
 		<footer className={`${styles.footer} container`}>
 			<div className={styles.footer__wrapper}>
-				{' '}
 				<nav className='list'>
 					<h2 className='list__title'>{data.about.title}</h2>
 					<ul className='list__items'>
@@ -82,7 +82,6 @@ const Footer: FC = () => {
 						url='https://www.ivi.ru/profile'
 						container={`${styles.footer__button} ${styles.footer__button_type_rectangle}`}
 					>
-						{' '}
 						<p className={`list__title ${styles.footer__buttonText}`}>
 							Написать в чате
 						</p>
@@ -101,15 +100,17 @@ const Footer: FC = () => {
 						<li
 							className={`${styles.footer__link} ${styles.footer__link_relative}`}
 						>
-							{' '}
-							<button onClick={toggleBtnPopup} className={styles.footer__btn}>
-								<div
-									className={`${styles.footer__btnIcon} ${styles.footer__btnIcon_type_phone}`}
-								></div>
-							</button>
-							<a
-								href='tel:88002344923'
-								className={`${styles.footer__btnPopup} ${
+							<Button
+								type='Button'
+								onClick={toggleBtnPopup}
+								container={styles.footer__btn}
+								imgLeft={phoneIcon}
+								imgLeftContainer={`${styles.footer__btnIcon} ${styles.footer__btnIcon_type_phone}`}
+							></Button>
+							<Button
+								type='Link'
+								url='tel:88002344923'
+								container={`${styles.footer__btnPopup} ${
 									btnPopupOpen && `${styles.footer__btnPopup_opened}`
 								}`}
 							>
@@ -119,7 +120,7 @@ const Footer: FC = () => {
 								<p className={`${styles.footer__btnPopupText} list__item`}>
 									Бесплатно по России
 								</p>
-							</a>
+							</Button>
 						</li>
 					</ul>
 					<a
@@ -155,7 +156,6 @@ const Footer: FC = () => {
 								imgLeftContainer={styles.footer__deviceIcon}
 							>
 								<div>
-									{' '}
 									<div className={styles.footer__deviceText}>Загрузить в</div>
 									<div className={`${styles.footer__deviceTitle} list__title`}>
 										App Store

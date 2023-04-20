@@ -29,7 +29,6 @@ const Layout: FC<PropsWithChildren<LayoutPropsTypes>> = ({
 				>
 					<Header />
 					<main className={styles.main}>{children}</main>
-
 					{windowWidth > 1024 ? <Footer /> : <FooterAdaptive />}
 				</Meta>
 			)}

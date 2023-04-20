@@ -1,0 +1,210 @@
+@import '../../styles/variable.scss';
+
+.person {
+	padding: 0 10px 30px;
+	&__goBackButton {
+		width: 74px;
+		margin: 20px 0 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: $white;
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: 500;
+		&:hover {
+			.person__goBackIcon {
+				padding: 0;
+			}
+		}
+	}
+	&__goBackIcon {
+		width: 24px;
+		height: 24px;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding: 2px;
+		transition: all ease 0.3s;
+	}
+	&__container {
+		width: 50%;
+		margin: 0 auto;
+	}
+	&__image {
+		width: 120px;
+		height: 120px;
+		background-position: center;
+		object-fit: cover;
+		background-repeat: no-repeat;
+		border-radius: 16px;
+		margin: 0 0 15px;
+	}
+	&__name {
+		color: $white;
+		font-size: 56px;
+		line-height: 56px;
+		font-weight: 700;
+	}
+	&__nameOrigin {
+		color: $grey;
+		font-size: 15px;
+		line-height: 22px;
+		font-weight: 400;
+		margin: 16px 0 0;
+	}
+	&__tagline {
+		color: $grey-lighter;
+		font-size: 15px;
+		line-height: 22px;
+		font-weight: 400;
+		margin: 16px 0 8px;
+		width: 100%;
+		display: block;
+		display: -webkit-box;
+		height: 44px;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		&_open {
+			overflow: visible;
+			height: 100%;
+			-webkit-line-clamp: unset;
+		}
+	}
+	&__link {
+		color: $grey;
+		font-size: 15px;
+		line-height: 22px;
+		font-weight: 400;
+		background-color: transparent;
+		transition: all ease 0.5s;
+		&:hover {
+			color: $grey-lighter;
+		}
+	}
+
+	&__chapters {
+		margin: 36px 0;
+	}
+	&__chapter {
+		color: $grey-lighter;
+		font-size: 18px;
+		line-height: 21px;
+		font-weight: 400;
+		transition: all ease 0.5s;
+		&:hover {
+			color: $white;
+		}
+	}
+
+	&__filmographyTitle {
+		display: flex;
+		align-items: baseline;
+	}
+	&__chapterTitle {
+		color: $white;
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 700;
+		margin: 0 10px 0 0;
+	}
+	&__chapterSubTitle {
+		color: $grey;
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+	&__switchers {
+		padding: 30px 0 0;
+		border-bottom: 1px solid $border-color;
+	}
+	&__switcher {
+		background-color: transparent;
+		padding: 0 0 10px;
+		color: $grey;
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: 700;
+		transition: all ease 0.5s;
+		margin: 0 14px 0 0;
+		border-bottom: 3px solid transparent;
+		&:last-of-type {
+			margin: 0;
+		}
+		&:hover {
+			color: $white;
+		}
+		&_active {
+			color: $white;
+			border-bottom: 3px solid $red;
+		}
+	}
+
+	&__biography {
+		margin: 40px 0 0;
+	}
+	&__biographyText {
+		color: $grey-lighter;
+		font-size: 15px;
+		line-height: 22px;
+		font-weight: 400;
+		margin: 16px 0 8px;
+		width: 100%;
+		display: block;
+		display: -webkit-box;
+		height: 220px;
+		-webkit-line-clamp: 10;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		&_open {
+			overflow: visible;
+			height: 100%;
+			-webkit-line-clamp: unset;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.person {
+		padding: 0 0 30px;
+		&__container {
+			width: 70%;
+		}
+		&__goBackButton {
+			margin: 20px 0 20px;
+		}
+		&__name {
+			color: $white;
+			font-size: 40px;
+			line-height: 44px;
+			font-weight: 700;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.person {
+		&__container {
+			width: 90%;
+		}
+		&__name {
+			color: $white;
+			font-size: 32px;
+			line-height: 30px;
+			font-weight: 700;
+		}
+		&__chapterTitle {
+			font-size: 16px;
+			line-height: 20px;
+			font-weight: 700;
+		}
+		&__chapterSubTitle {
+			font-size: 12px;
+			line-height: 16px;
+			font-weight: 400;
+		}
+	}
+}

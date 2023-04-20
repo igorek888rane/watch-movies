@@ -7,6 +7,7 @@ import arrowIconHide from '../../assets/img/icons/arrow-hide.svg'
 import cameraIcon from '../../assets/img/icons/camera-icon.svg'
 import aboutIcon from '../../assets/img/icons/about-icon.svg'
 import mailIcon from '../../assets/img/icons/mail.svg'
+import phoneIcon from '../../assets/img/icons/phone-call.svg'
 import appealIcon from '../../assets/img/icons/appeal-icon.svg'
 import appleIcon from '../../assets/img/icons/apple-white.svg'
 import googleIcon from '../../assets/img/icons/google-play.svg'
@@ -54,7 +55,6 @@ const FooterAdaptive: FC = () => {
 							imgLeftContainer={styles.footer__deviceIcon}
 						>
 							<div>
-								{' '}
 								<div className={styles.footer__deviceText}>Загрузить в</div>
 								<div className={`${styles.footer__deviceTitle} list__title`}>
 									App Store
@@ -113,7 +113,6 @@ const FooterAdaptive: FC = () => {
 			</div>
 
 			<div className={styles.footer__menu}>
-				{' '}
 				<nav className={`list ${styles.footer__list}`}>
 					<div className={styles.footer__menuTitle}>
 						<Button
@@ -263,7 +262,6 @@ const FooterAdaptive: FC = () => {
 							url='https://www.ivi.ru/profile'
 							container={`${styles.footer__button} ${styles.footer__button_type_rectangle}`}
 						>
-							{' '}
 							<p className={`list__title ${styles.footer__buttonText}`}>
 								Написать в чате
 							</p>
@@ -282,15 +280,17 @@ const FooterAdaptive: FC = () => {
 							<li
 								className={`${styles.footer__link} ${styles.footer__link_relative}`}
 							>
-								{' '}
-								<button onClick={toggleBtnPopup} className={styles.footer__btn}>
-									<div
-										className={`${styles.footer__btnIcon} ${styles.footer__btnIcon_type_phone}`}
-									></div>
-								</button>
-								<a
-									href='tel:88002344923'
-									className={`${styles.footer__btnPopup} ${
+								<Button
+									type='Button'
+									onClick={toggleBtnPopup}
+									container={styles.footer__btn}
+									imgLeft={phoneIcon}
+									imgLeftContainer={`${styles.footer__btnIcon} ${styles.footer__btnIcon_type_phone}`}
+								></Button>
+								<Button
+									type='Link'
+									url='tel:88002344923'
+									container={`${styles.footer__btnPopup} ${
 										btnPopupOpen && `${styles.footer__btnPopup_opened}`
 									}`}
 								>
@@ -300,7 +300,7 @@ const FooterAdaptive: FC = () => {
 									<p className={`${styles.footer__btnPopupText} list__item`}>
 										Бесплатно по России
 									</p>
-								</a>
+								</Button>
 							</li>
 						</ul>
 						<a
@@ -318,7 +318,6 @@ const FooterAdaptive: FC = () => {
 			</div>
 
 			<div className={styles.footer__menu}>
-				{' '}
 				<ul className={`${styles.footer__publics} list`}>
 					<li className={`${styles.footer__public} list__item`}>
 						<Button

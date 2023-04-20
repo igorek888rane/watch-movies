@@ -1,284 +1,278 @@
 @import '../../styles/variable.scss';
 
 @keyframes showBurger {
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .footer {
-  .footer__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-top: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
-  }
+	.footer__wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 10px 0;
+		border-top: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+	}
 
-  .footer__menu {
-    display: flex;
-    flex-direction: column;
-    padding: 32px;
-    border-bottom: 1px solid $border-color;
-  }
+	.footer__menu {
+		display: flex;
+		flex-direction: column;
+		padding: 32px;
+		border-bottom: 1px solid $border-color;
+	}
 
-  .footer__list {
-    margin: 0 0 10px;
-  }
+	.footer__list {
+		margin: 0 0 10px;
+	}
 
-  .footer__menuTitle {
-    display: flex;
-    align-items: center;
-    width: 240px;
-  }
+	.footer__menuTitle {
+		display: flex;
+		align-items: center;
+		width: 240px;
+	}
 
-  .footer__menuBtn {
-    width: 16px;
-    height: 16px;
-    background-color: transparent;
-    margin: 0 0 8px 8px;
+	.footer__menuBtn {
+		width: 16px;
+		height: 16px;
+		background-color: transparent;
+		margin: 0 0 8px 8px;
 
-    &:first-of-type {
-      margin: 0 8px 8px 0;
-    }
-  }
+		&:first-of-type {
+			margin: 0 8px 8px 0;
+		}
+	}
 
-  .footer__menuIcon {
-    width: 16px;
-    height: 16px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+	.footer__menuIcon {
+		width: 16px;
+		height: 16px;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
 
-  .footer__menuContent {
-    display: none;
-    opacity: 0;
-    transform: translateY(-30px);
-    width: 100%;
-    margin: 0 0 20px;
+	.footer__menuContent {
+		display: none;
+		opacity: 0;
+		transform: translateY(-30px);
+		width: 100%;
+		margin: 0 0 20px;
 
-    &_opened {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      animation-name: showBurger;
-      animation-duration: 0.8s;
-      animation-fill-mode: forwards;
-    }
-  }
+		&_opened {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			animation-name: showBurger;
+			animation-duration: 0.8s;
+			animation-fill-mode: forwards;
+		}
+	}
 
-  .footer__publics {
-    display: flex;
-    justify-content: center;
-    margin: 0 0 20px;
-  }
+	.footer__publics {
+		display: flex;
+		justify-content: center;
+		margin: 0 0 20px;
+	}
 
-  .footer__public {
-    border-radius: 50%;
-    margin: 0 12px 0 0;
+	.footer__public {
+		border-radius: 50%;
+		margin: 0 12px 0 0;
 
-    &:last-of-type {
-      margin: 0;
-    }
-  }
+		&:last-of-type {
+			margin: 0;
+		}
+	}
 
-  .footer__desc {
-    margin: 0 0 10px;
-  }
+	.footer__desc {
+		margin: 0 0 10px;
+	}
 
-  .footer__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $violet;
-    font-size: 15px;
-    line-height: 20px;
-    font-weight: 700;
-    color: $white;
-    margin: 0;
-    transition: all ease 0.5s;
+	.footer__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $violet;
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: 700;
+		color: $white;
+		margin: 0;
+		transition: all ease 0.5s;
 
-    &:hover {
-      background-color: $btnHover;
-    }
+		&:hover {
+			background-color: $btnHover;
+		}
 
-    &_type {
-      &_rectangle {
-        border-radius: 8px;
-        padding: 5px 10px;
-      }
+		&_type {
+			&_rectangle {
+				border-radius: 8px;
+				padding: 5px 10px;
+			}
 
-      &_circle {
-        padding: 10px 10px;
-        border-radius: 50%;
-      }
-    }
-  }
+			&_circle {
+				padding: 10px 10px;
+				border-radius: 50%;
+			}
+		}
+	}
 
-  .footer__buttonText {
-    margin: 0;
-    padding: 5px 30px;
-  }
+	.footer__buttonText {
+		margin: 0;
+		padding: 5px 30px;
+	}
 
-  .footer__links {
-    display: flex;
-    margin: 12px 0 24px;
-  }
+	.footer__links {
+		display: flex;
+		margin: 12px 0 24px;
+	}
 
-  .footer__link {
-    margin: 0 8px 0 0;
+	.footer__link {
+		margin: 0 8px 0 0;
 
-    &_relative {
-      position: relative;
-    }
-  }
+		&_relative {
+			position: relative;
+		}
+	}
 
-  .footer__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $violet;
-    padding: 10px;
-    border-radius: 10px;
-    transition: all ease 0.5s;
+	.footer__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $violet;
+		padding: 10px;
+		border-radius: 10px;
+		transition: all ease 0.5s;
+		&:hover {
+			background-color: $btnHover;
+		}
+	}
 
-    &:hover {
-      background-color: $btnHover;
-    }
-  }
+	.footer__btnIcon {
+		width: 16px;
+		height: 16px;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		&_type {
+			&_mail {
+				margin: 5px 0;
+			}
+		}
+	}
 
-  .footer__btnIcon {
-    width: 16px;
-    height: 16px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+	.footer__btnPopup {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		background-color: $violet;
+		padding: 8px 16px;
+		width: 190px;
+		border-radius: 10px;
+		position: absolute;
+		top: 50px;
+		left: -44px;
+		transition: all ease 0.5s;
 
-    &_type {
-      &_mail {
-        margin: 5px 0;
-      }
+		&:hover {
+			background-color: $btnHover;
+		}
 
-      &_phone {
-        background-image: url('../../assets/img/icons/phone-call.svg');
-      }
-    }
-  }
+		&_opened {
+			display: flex;
+		}
+	}
 
-  .footer__btnPopup {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: $violet;
-    padding: 8px 16px;
-    width: 190px;
-    border-radius: 10px;
-    position: absolute;
-    top: 50px;
-    left: -44px;
-    transition: all ease 0.5s;
+	.footer__btnPopup_opened {
+		display: flex;
+	}
 
-    &:hover {
-      background-color: $btnHover;
-    }
+	.footer__btnPopupPhone {
+		margin: 0;
+	}
 
-    &_opened {
-      display: flex;
-    }
-  }
+	.footer__btnPopupText {
+		margin: 0;
+	}
 
-  .footer__btnPopup_opened {
-    display: flex;
-  }
+	.footer__deviceIcon {
+		width: 20px;
+		height: 20px;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin: 0 8px 0 0;
 
-  .footer__btnPopupPhone {
-    margin: 0;
-  }
+		&_type {
+			&_allDevices {
+				margin: 6px 8px 6px 10px;
+				background-image: url('../../assets/img/icons/monitor-phone.svg');
+			}
+		}
+	}
 
-  .footer__btnPopupText {
-    margin: 0;
-  }
+	.footer__deviceText {
+		font-size: 10px;
+		line-height: 12px;
+		font-weight: 500;
+		font-style: normal;
+	}
 
-  .footer__deviceIcon {
-    width: 20px;
-    height: 20px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 0 8px 0 0;
+	.footer__deviceTitle {
+		margin: 0;
+	}
 
-    &_type {
-      &_allDevices {
-        margin: 6px 8px 6px 10px;
-        background-image: url('../../assets/img/icons/monitor-phone.svg');
-      }
-    }
-  }
+	.footer__socials {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		margin: 0;
+	}
 
-  .footer__deviceText {
-    font-size: 10px;
-    line-height: 12px;
-    font-weight: 500;
-    font-style: normal;
-  }
+	.footer__social {
+		width: 182px;
+		border-radius: 50%;
+		margin: 0 0 0 12px;
 
-  .footer__deviceTitle {
-    margin: 0;
-  }
+		&:first-of-type {
+			margin: 0;
+		}
+	}
 
-  .footer__socials {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0;
-  }
-
-  .footer__social {
-    width: 182px;
-    border-radius: 50%;
-    margin: 0 0 0 12px;
-
-    &:first-of-type {
-      margin: 0;
-    }
-  }
-
-  .footer__socialIcon {
-    width: 16px;
-    height: 16px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+	.footer__socialIcon {
+		width: 16px;
+		height: 16px;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
 }
 
 @media screen and (max-width: 840px) {
-  .footer {
-    .footer__socials {
-      max-width: 396px;
-      margin: 0 auto;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+	.footer {
+		.footer__socials {
+			max-width: 396px;
+			margin: 0 auto;
+			align-items: center;
+			flex-wrap: wrap;
+		}
 
-    .footer__social {
-      border-radius: 50%;
-      margin: 0 8px 12px;
+		.footer__social {
+			border-radius: 50%;
+			margin: 0 8px 12px;
 
-      &:first-of-type {
-        margin: 0 8px 12px;
-      }
-    }
-  }
+			&:first-of-type {
+				margin: 0 8px 12px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 400px) {
-  .footer {
-    .footer__menu {
-      padding: 32px 0;
-    }
-  }
+	.footer {
+		.footer__menu {
+			padding: 32px 0;
+		}
+	}
 }
