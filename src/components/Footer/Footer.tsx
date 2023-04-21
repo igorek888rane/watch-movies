@@ -24,7 +24,6 @@ const Footer: FC = () => {
 	return (
 		<footer className={`${styles.footer} container`}>
 			<div className={styles.footer__wrapper}>
-				{' '}
 				<nav className='list'>
 					<h2 className='list__title'>{data.about.title}</h2>
 					<ul className='list__items'>
@@ -82,7 +81,6 @@ const Footer: FC = () => {
 						url='https://www.ivi.ru/profile'
 						container={`${styles.footer__button} ${styles.footer__button_type_rectangle}`}
 					>
-						{' '}
 						<p className={`list__title ${styles.footer__buttonText}`}>
 							Написать в чате
 						</p>
@@ -101,7 +99,6 @@ const Footer: FC = () => {
 						<li
 							className={`${styles.footer__link} ${styles.footer__link_relative}`}
 						>
-							{' '}
 							<button onClick={toggleBtnPopup} className={styles.footer__btn}>
 								<div
 									className={`${styles.footer__btnIcon} ${styles.footer__btnIcon_type_phone}`}
@@ -155,7 +152,6 @@ const Footer: FC = () => {
 								imgLeftContainer={styles.footer__deviceIcon}
 							>
 								<div>
-									{' '}
 									<div className={styles.footer__deviceText}>Загрузить в</div>
 									<div className={`${styles.footer__deviceTitle} list__title`}>
 										App Store

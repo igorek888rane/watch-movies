@@ -1,19 +1,20 @@
-import { FC } from 'react'
+import { FC, PropsWithChildren } from 'react'
 import styles from './MoviesCards.module.scss'
-import MovieCard from '@/components/MoviesCards/MovieCard'
-import { useAppSelector } from '@/hooks/useApp'
+import MovieCard from '@/components/MovieCard/MovieCard'
+import { MoviesCardsPropsTypes } from './types'
 
-const MoviesCards: FC = () => {
-	const { movies } = useAppSelector(state => state.movies)
+const MoviesCards: FC<PropsWithChildren<MoviesCardsPropsTypes>> = ({
+	movies,
+}) => {
 	return (
-		<div className={styles.cart_container}>
-			<div className={styles.wrapper}>
-				<ul>
-					{movies.map(movie => (
-						<MovieCard key={movie.id} movie={movie} />
-					))}
-				</ul>
-			</div>
+		<div className={styles.cards}>
+			<ul className={styles.cards__list}>
+				{movies.map(movie => (
+					<li key={movie.id} className={styles.cards__item}>
+						<MovieCard movie={movie} />
+					</li>
+				))}
+			</ul>
 		</div>
 	)
 }

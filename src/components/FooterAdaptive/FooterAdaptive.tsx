@@ -54,7 +54,6 @@ const FooterAdaptive: FC = () => {
 							imgLeftContainer={styles.footer__deviceIcon}
 						>
 							<div>
-								{' '}
 								<div className={styles.footer__deviceText}>Загрузить в</div>
 								<div className={`${styles.footer__deviceTitle} list__title`}>
 									App Store
@@ -263,7 +262,6 @@ const FooterAdaptive: FC = () => {
 							url='https://www.ivi.ru/profile'
 							container={`${styles.footer__button} ${styles.footer__button_type_rectangle}`}
 						>
-							{' '}
 							<p className={`list__title ${styles.footer__buttonText}`}>
 								Написать в чате
 							</p>
@@ -282,7 +280,6 @@ const FooterAdaptive: FC = () => {
 							<li
 								className={`${styles.footer__link} ${styles.footer__link_relative}`}
 							>
-								{' '}
 								<button onClick={toggleBtnPopup} className={styles.footer__btn}>
 									<div
 										className={`${styles.footer__btnIcon} ${styles.footer__btnIcon_type_phone}`}
@@ -318,7 +315,6 @@ const FooterAdaptive: FC = () => {
 			</div>
 
 			<div className={styles.footer__menu}>
-				{' '}
 				<ul className={`${styles.footer__publics} list`}>
 					<li className={`${styles.footer__public} list__item`}>
 						<Button
