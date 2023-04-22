@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .cart_container {
 	padding-top: 24px;
 	max-width: 1240px;
@@ -359,5 +360,16 @@
 				}
 			}
 		}
+=======
+.cards {
+	padding: 24px 0 24px 0;
+	max-width: 1240px;
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	&__item {
+>>>>>>> wyctpukkk
 	}
 }

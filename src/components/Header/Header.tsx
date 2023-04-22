@@ -4,6 +4,7 @@ import searchSvg from '../../assets/img/icons/search.svg'
 import ringSvg from '../../assets/img/icons/ring.svg'
 import accountSvg from '../../assets/img/icons/account.svg'
 import Button from '@/components/UI/Button/Button'
+import Link from 'next/link'
 
 const Header: FC = () => {
 	return (
@@ -11,12 +12,12 @@ const Header: FC = () => {
 			<header className={styles.header}>
 				<div className={styles.header__left}>
 					<nav className={styles.nav}>
-						<a className={styles.nav__link}>
+						<Link href='/' className={styles.nav__link}>
 							<img
 								className={styles.logotype}
 								src='https://solea-parent.dfs.ivi.ru/picture/ea003d,ffffff/reposition_iviLogoPlateRounded.svg'
 							></img>
-						</a>
+						</Link>
 						<ul className={styles.nav__list}>
 							<li className={styles.nav__item}>
 								<a className={styles.nav__link}>Мой Иви</a>
@@ -25,7 +26,9 @@ const Header: FC = () => {
 								<a className={styles.nav__link}>Что нового</a>
 							</li>
 							<li className={styles.nav__item}>
-								<a className={styles.nav__link}>Фильмы</a>
+								<Link href='/movies' className={styles.nav__link}>
+									Фильмы
+								</Link>
 							</li>
 							<li className={styles.nav__item}>
 								<a className={styles.nav__link}>Сериалы</a>

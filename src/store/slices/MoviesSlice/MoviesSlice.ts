@@ -1,14 +1,14 @@
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
 import { IMovie } from '@/store/slices/MoviesSlice/types'
-import movie from '../../../data/MoviesCardsData.json'
+import movies from '../../../data/MoviesCardsData.json'
 
-interface MoviesState {
+interface movieState {
 	movies: IMovie[]
 }
 
-const initialState: MoviesState = {
-	movies: movie,
+const initialState: movieState = {
+	movies,
 }
 
 const moviesSlice = createSlice({

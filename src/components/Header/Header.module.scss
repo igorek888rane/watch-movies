@@ -70,55 +70,55 @@
 }
 
 .searchText {
-	filter: brightness(0.5);
+	filter: brightness(1);
 	font-weight: 600;
 	display: flex;
 	align-items: center;
-	color: white;
-	background-color: #191329;
+	color: grey;
+	background-color: #100e19;
 	transition: all ease 0.5s;
 
 	&:hover {
-		filter: brightness(1);
+		filter: brightness(1.7);
 	}
 }
 
 .searchButton {
 	width: 35px;
 	height: 35px;
-	background-color: #191329;
+	background-color: #100e19;
 }
 
 .ringButton {
-	filter: brightness(0.5);
+	filter: brightness(1);
 	width: 20px;
 	height: 20px;
-	background-color: #191329;
+	background-color: #100e19;
 	transition: all ease 0.5s;
 
 	&:hover {
-		filter: brightness(1);
+		filter: brightness(1.7);
 	}
 }
 
 .buttonWrapper {
-	filter: brightness(0.5);
+	filter: brightness(1);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 48px;
 	height: 48px;
-	border: 2px solid white;
+	border: 2px solid grey;
 	border-radius: 8px;
 	transition: all ease 0.5s;
 
 	&:hover {
-		filter: brightness(1);
+		filter: brightness(1.7);
 	}
 }
 
 .accountButton {
 	width: 23px;
 	height: 23px;
-	background-color: #191329;
+	background-color: #100e19;
 }
