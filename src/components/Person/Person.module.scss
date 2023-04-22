@@ -184,27 +184,3 @@
 		}
 	}
 }
-
-@media screen and (max-width: 800px) {
-	.person {
-		&__container {
-			width: 90%;
-		}
-		&__name {
-			color: $white;
-			font-size: 32px;
-			line-height: 28px;
-			font-weight: 700;
-		}
-		&__chapterTitle {
-			font-size: 16px;
-			line-height: 20px;
-			font-weight: 700;
-		}
-		&__chapterSubTitle {
-			font-size: 12px;
-			line-height: 16px;
-			font-weight: 400;
-		}
-	}
-}
