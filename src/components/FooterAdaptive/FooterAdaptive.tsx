@@ -280,7 +280,6 @@ const FooterAdaptive: FC = () => {
 							<li
 								className={`${styles.footer__link} ${styles.footer__link_relative}`}
 							>
-<<<<<<< HEAD
 								<Button
 									type='Button'
 									onClick={toggleBtnPopup}
@@ -292,16 +291,6 @@ const FooterAdaptive: FC = () => {
 									type='Link'
 									url='tel:88002344923'
 									container={`${styles.footer__btnPopup} ${
-=======
-								<button onClick={toggleBtnPopup} className={styles.footer__btn}>
-									<div
-										className={`${styles.footer__btnIcon} ${styles.footer__btnIcon_type_phone}`}
-									></div>
-								</button>
-								<a
-									href='tel:88002344923'
-									className={`${styles.footer__btnPopup} ${
->>>>>>> wyctpukkk
 										btnPopupOpen && `${styles.footer__btnPopup_opened}`
 									}`}
 								>
